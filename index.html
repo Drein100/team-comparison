@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta ve link etiketleri -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Comparison</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Team Comparison</h1>
+        <div class="select-container">
+            <label>League:</label>
+            <select id="league-select">
+                <option value="" disabled selected>Select league...</option>
+                <option value="Premier League">Premier League</option>
+                <option value="La Liga">La Liga</option>
+                <option value="Bundesliga">Bundesliga</option>
+                <option value="Serie A">Serie A</option>
+                <option value="Ligue 1">Ligue 1</option>
+                <option value="Super Lig">Super Lig</option>
+                <option value="Champions League">Champions League</option>
+                <option value="Europa League">Europa League</option>
+            </select>
+
+            <label>Team 1:</label>
+            <select id="team1-select" disabled>
+                <option value="" disabled selected>Select league first.</option>
+            </select>
+
+            <label>Team 2:</label>
+            <select id="team2-select" disabled>
+                <option value="" disabled selected>Select league first.</option>
+            </select>
+
+            <button id="compare-btn" disabled>Compare</button>
+            <button id="download-btn" disabled>Download Table as PNG</button> 
+
+        </div>
+        <div id="comparison-result" class="result-container"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

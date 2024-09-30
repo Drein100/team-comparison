@@ -1,0 +1,178 @@
+/* Genel Ayarlar */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1e1e2f; /* Koyu arka plan rengi */
+    padding: 0;
+    margin: 20px;
+    color: #f0f0f5; /* Açık metin rengi */
+}
+
+/* Konteyner */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    padding-top: 5px;
+    background-color: #2b2b3a; /* Koyu gri arka plan */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Daha koyu gölge */
+}
+
+/* Başlık */
+h1 {
+    text-align: center;
+    color: #e6e6ff; /* Açık başlık rengi */
+}
+
+/* Seçim Kutuları */
+.select-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: 600;
+    color: #f0f0f5; /* Açık etiket rengi */
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #4b4b5e;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #343444; /* Koyu seçim kutusu arka planı */
+    color: #f0f0f5; /* Açık metin rengi */
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23f0f0f5"><path d="M7 10l5 5 5-5H7z"/></svg>'); /* Açık ok ikonu */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+#team1-select:disabled, #team2-select:disabled {
+    color: #6d737a;
+}
+
+select:enabled:hover {
+    border-color: #28a745; /* Hover efekti */
+}
+
+select:enabled:focus {
+    outline: none;
+    border-color: #28a745;
+    background-color: #3e3e50; /* Seçim kutusu hover */
+}
+
+/* Buton Stili */
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+/* Hover Durumu */
+button:hover {
+    background-color: #218838;
+}
+
+/* Disabled Buton Stili */
+button:disabled {
+    background-color: #adb5bd;
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+/* Tablo ve Sonuç Stili */
+.result-container {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #2b2b3a;
+    border-radius: 5px;
+    border: 1px solid #4b4b5e;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #4b4b5e; /* Tablo sınırları */
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+    color: #f0f0f5; /* Açık metin rengi */
+}
+
+th {
+    background-color: #343444; /* Başlık arka planı */
+    color: #d4d4d4;
+}
+
+.highlight {
+    background-color: #28a745; /* Daha iyi değerler için açık yeşil */
+    color: white;
+    font-weight: bold;
+}
+
+/* Responsive Düzenlemeler */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .select-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    select, button {
+        width: 100%;
+    }
+
+    th, td, body, select, button, #comparison-result {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .select-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    select, button {
+        width: 100%;
+    }
+
+    th, td, body, select, button, #comparison-result {
+        padding: 8px;
+        font-size: 12px;
+    }
+}
