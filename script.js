@@ -102,7 +102,12 @@ document.addEventListener("DOMContentLoaded", () => {
         resultDiv.innerHTML = "<h2>Results</h2>";
         const table = document.createElement("table");
 
-        table.innerHTML = "<tr><th>Stats</th><th>" + team1 + "</th><th>" + team2 + "</th></tr>";
+        table.innerHTML = `
+        <tr>
+            <th>Stats</th>
+            <th><img src="${allData["Takım Resmi"][team1]}" alt="${team1}" class="player-image" /> ${team1}</th>
+            <th><img src="${allData["Takım Resmi"][team2]}" alt="${team2}" class="player-image" /> ${team2}</th>
+        </tr>`;
 
         const lowerIsBetterStats = [
             "Big Chances Missed",

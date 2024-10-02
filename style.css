@@ -135,6 +135,13 @@ th {
     color: white;
     font-weight: bold;
 }
+.player-image {
+    width: 55px;  /* Adjust size as needed */
+    display: block;
+    height: auto;
+    margin: auto;
+    margin-bottom: 5px;
+}
 
 /* Responsive Düzenlemeler */
 @media (max-width: 768px) {
@@ -162,6 +169,9 @@ th {
     .infos > p {
         font-size: 10px;
     }
+    .player-image {
+        width: 40px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -188,5 +198,8 @@ th {
     }
     .infos > p {
         font-size: 8px;
+    }
+    .player-image {
+        width: 30px;
     }
 }

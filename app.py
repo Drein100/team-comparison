@@ -77,10 +77,14 @@ def fetch_team_data(league_name, stat_name):
     names = [item['name'] for item in stats_data]
     stat_values = [item['statValue']['value'] for item in stats_data]
 
+    team_ids = [item['teamId'] for item in stats_data]
+    team_images = [f'https://images.fotmob.com/image_resources/logo/teamlogo/{team_id}.png' for team_id in team_ids]
+
     # DataFrame oluştur
     df = pd.DataFrame({
         'Takım': names,
         stat_name: stat_values,
+        'Takım Resmi': team_images
     })
 
     return df
@@ -94,7 +98,7 @@ def compare_teams(league_name, stat_names):
         # İstatistikleri sözlükte sakla
         for index, row in df_team.iterrows():
             if row['Takım'] not in combined_stats:
-                combined_stats[row['Takım']] = {}
+                combined_stats[row['Takım']] = {'Takım Resmi': row['Takım Resmi']}  # Oyuncu resmini ekle
             # Değerleri yuvarlayarak ekle
             combined_stats[row['Takım']][stat_name] = round(row[stat_name], 1)
 
